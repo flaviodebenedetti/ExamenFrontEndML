@@ -1,57 +1,42 @@
-// se importan las dependencias de express
-var express 	= require('express');
-var app 		= express();
-var mongoose 	= require('mongoose');
+/**
+ * Module dependencies.
+ */
+var express = require('express'),
+    routes = require('./api'),
+    api = require('./routes/api');
 
-// Conexión con la base de datos
-mongoose.connect('mongodb://localhost:27017/ExamenFrontEndML');
+var app = module.exports = express.createServer();
 
-// Configuración
-/* app.configure(function() {
-	// Localización de los ficheros estáticos
-	app.use(express.static(__dirname + '/public'));
-	// Muestra un log de todos los request en la consola		
-	app.use(express.logger('dev'));	
-	// Permite cambiar el HTML con el método POST					
-	app.use(express.bodyParser());
-	// Simula DELETE y PUT						
-	app.use(express.methodOverride());					
-}); */
+// Configuration
 
-// Rutas de nuestro API
-// GET de todos los TODOs
-app.get('/api/models', function(req, res) {				
-	Todo.find(function(err, todos) {
-		if(err) {
-			res.send(err);
-		}
-		res.json(todos);
-	});
+app.configure(function(){
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'jade');
+  app.set('view options', {
+    layout: false
+  });
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+  app.use(express.static(__dirname + '/public'));
+  app.use(app.router);
 });
 
-// POST que crea un TODO y devuelve todos tras la creación
-app.post('/api/models', function(req, res) {				
-	Todo.create({
-		text: req.body.text,
-		done: false
-	}, function(err, todo){
-		if(err) {
-			res.send(err);
-		}
-		Todo.find(function(err, todos) {
-			if(err){
-				res.send(err);
-			}
-			res.json(todos);
-		});
-	});
-});
+// Routes
+app.get('/', routes.index);
+app.get('/partials/:name', routes.partials);
 
-app.get('*', function(req, res) {						
-	res.sendfile('./inicio.html');				
-});
+// JSON API
+app.get('/api/posts', api.posts);
 
-// Escucha en el puerto 8080 y corre el server
-app.listen(8080, function() {
-    console.log('App listening on port 8080');
+app.get('/api/post/:id', api.post);
+app.post('/api/post', api.addPost);
+app.put('/api/post/:id', api.editPost);
+app.delete('/api/post/:id', api.deletePost);
+
+// redirect all others to the index (HTML5 history)
+app.get('*', routes.index);
+
+// Start server
+app.listen(3000, function(){
+  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
