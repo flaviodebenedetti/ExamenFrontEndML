@@ -1,37 +1,64 @@
-/*
-Trae todos los productos
-https://api.mercadolibre.com/sites/MLA/search?q=:query
- */
-/*
-Buscamos por producto
-https://api.mercadolibre.com/items/:id
+app.service('Servidor', [ '$http', "$location", '$routeParams', '$rootScope', 'ConfigService', function($http,$location, $routeParams,$rootScope, ConfigService) {
 
+    var arrayProductos = {};
 
-{
-    "author":{
-        "name":"Flavio",
-        “lastname”:"de Benedetti"
-    },
-    "item":{
-        "id":String,
-        "title":String,
-        "price":{
-            "currency":String,
-            "amount":Number,
-            "decimals":Number
-        },
-        "picture":"",
-        "condition":String,
-        "free_shipping":Boolean,
-        "sold_quantity":Number",
-        "description":String
+    this.setArrayProductos = function(datos){
+		arrayProductos = datos;
+	};
+
+	this.getArrayProductos = function(){
+		return arrayProductos;
+	};
+
+    this.consultarTodosLosProductos = function(onSuccess, onError){
+		var req = {
+				method : 'POST',
+				url : 'https://api.mercadolibre.com/sites/MLA/search?q=:query',
+				headers : {
+					'Content-Type' : 'application/x-www-form-urlencoded; charset=ISO-8859-1'
+				},
+				dataType: "json"
+		}
+
+    	$http(req).then(function(response) {
+    		onSuccess(response);
+		}, function(errorResponse){
+			onError(errorResponse);
+		});
+	}
+
+    this.getProductoPorId = function(producto, onSuccess, onError){
+        var req = {
+            method : 'POST',
+            url : 'https://api.mercadolibre.com/items/:' + producto.id,
+            headers : {
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=ISO-8859-1'
+            },
+            dataType: "json"
+        }
+
+        $http(req).then(function(response) {
+            onSuccess(response);
+        }, function(errorResponse){
+            onError(errorResponse);
+        });
     }
-}
 
+    this.getProductoPorDescripcion = function(producto, onSuccess, onError){
+        var req = {
+            method : 'POST',
+            url : 'https://api.mercadolibre.com/items/:' + producto.id + '/'+producto.descripcion,
+            headers : {
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=ISO-8859-1'
+            },
+            dataType: "json"
+        }
 
-*/
-/*
-Buscamos por producto
-https://api.mercadolibre.com/items/:id
-https://api.mercadolibre.com/items/:id​/description
-*/
+        $http(req).then(function(response) {
+            onSuccess(response);
+        }, function(errorResponse){
+            onError(errorResponse);
+        });
+    }
+
+}]);
