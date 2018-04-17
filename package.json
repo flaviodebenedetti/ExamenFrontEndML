@@ -1,6 +1,5 @@
 {
     "name": "ExamenFrontEndML",
-    "version": "1.0",
     "main": "server.js",
     "author": "Flavio de Benedetti",
     "repository": {
