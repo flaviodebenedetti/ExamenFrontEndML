@@ -1,22 +1,21 @@
-'use strict';
-
-angular.module('examenFrontEndML', ['examenFrontEndML.services']).
-  config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+var app = angular.module('examenFrontEndML', ['ngRoute']);
+debugger;
+app.config(['$routeProvider',
+	function ($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'partials/index',
-        controller: IndexCtrl
+        templateUrl: 'public/inicio.html',
+        controller: mainController
       }).
       when('/items?search=', {
-        templateUrl: 'views/busqueda',
+        templateUrl: 'public/views/busqueda.html',
         controller: BusquedaController
       }).
       when('/items/:id', {
-        templateUrl: 'views/detalle',
+        templateUrl: 'public/views/detalle.html',
         controller: DetalleController
-      }).
-      otherwise({
+      })
+      .otherwise({
         redirectTo: '/'
       });
-    $locationProvider.html5Mode(true);
 }]);
