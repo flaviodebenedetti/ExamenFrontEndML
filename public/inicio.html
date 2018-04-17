@@ -1,19 +1,26 @@
 <html lang="es-AR" ng-app="examenFrontEndML">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="https://http2.mlstatic.com/ui/navigation/3.2.1/mercadolibre/navigation-plus.css">
-        <link rel="stylesheet" type="text/css" href="./api/style/style.scss">
+        <link rel="stylesheet" type="text/css" href="/style/style.scss">
         <title>Examen Front End MercadoPago</title>
-        <link href="https://http2.mlstatic.com/resources/frontend/statics/homes-palpatine/home.desktop.d10c2c31.css" rel="stylesheet" type="text/css">
     </head>
     <body ng-controller="mainController">
-        <div class="form-ml">
-            <div class="search">
-                <div class="image-logo"></div>
-                <input type="text" class="" placeholder="Nunca dejes de buscar"></input>
-                <div class="image-busqueda"></div>
+        <header role="banner" class="nav-header">
+            <div class="div-busqueda">
+                <form class="form-search">
+                    <div class="nav-logo"></div>
+                    <input type="text" class="input-search" id="descripcion" name="descripcion" max-length="80" placeholder="Buscar productos">
+                    <button type="submit" class="btn-search">
+                        <div class="icon-search"></div>
+                    </button>
+                </form>
             </div>
-        </div> 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+        </header>
+        <main class"main">
+            <h3>Main</h3>
+        </main>
+        <footer role="contentinfo" class="footer">
+            Footer
+	    </footer>
     </body>
 </html>

@@ -5,7 +5,7 @@ angular.module('examenFrontEndML', ['examenFrontEndML.services']).
     $routeProvider.
       when('/', {
         templateUrl: 'partials/index',
-        controller: IndexCtrl
+        controller: mainController
       }).
       when('/items?search=', {
         templateUrl: 'views/busqueda',
