@@ -39,6 +39,7 @@ div.icon-search{
     background: url('/img/lupa.png') 100% 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+<<<<<<< HEAD
     height: 25px;
     width: 30px;
     position: relative;
@@ -66,6 +67,31 @@ input[type='text']{
     position: relative;
     top: -13px;
     left: 124px;
+=======
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 5px;
+    left: 15px;
+}
+
+input[type='text']{
+    position: relative;
+    left: 160px;
+    top: -20px;
+    height: 30px;
+    width: 50%;
+}
+
+.btn-search{
+    border: 1px;
+    border-radius: 8px;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: -17px;
+    left: 110px;
+>>>>>>> branch 'prototipo' of https://github.com/flaviodebenedetti/ExamenFrontEndML.git
     background-color: transparent;
 }
 
