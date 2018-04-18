@@ -1,10 +1,10 @@
-<html lang="es-AR" ng-app="examenFrontEndML">
+<html ng-app="testML">
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="/style/style.scss">
-        <title>Examen Front End MercadoPago</title>
+        <title>Flavio MP</title>
     </head>
-    <body ng-controller="mainController">
+    <body>
         <header role="banner" class="nav-header">
             <div class="div-busqueda">
                 <form class="form-search">
@@ -16,13 +16,15 @@
                 </form>
             </div>
         </header>
-        <main class"main">
-            <ng-view></ng-view>
-        </main>
-        <footer role="contentinfo" class="footer">
-            Footer
-        </footer>
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-	    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+            <!--Angular.js Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-resource.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-sanitize.min.js"></script>
+        
+        <!-- Configuracion de la aplicación angular -->
+        <script src="app/app.js"></script>
+        <script src="app/controllers/busquedaController.js"></script>
+        <script src="app/controllers/detalleController.js"></script>
     </body>
 </html>
