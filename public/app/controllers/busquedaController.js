@@ -1,6 +1,5 @@
-'use strict';
-appControllers.controller('busquedaController', ['$http', '$scope', '$location', '$rootScope', function ($http, $scope, $location, $rootScope) {
+app.controller('busquedaController', ['$http', '$scope', '$location', 'Servidor', '$rootScope', function ($http, $scope, $location, Servidor, $rootScope) {
     
-    console.log('Controlador de busqueda..');
+    
 
 }]);

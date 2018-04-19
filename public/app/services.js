@@ -13,7 +13,7 @@ app.service('Servidor', [ '$http', "$location", '$routeParams', '$rootScope', 'C
     this.consultarTodosLosProductos = function(onSuccess, onError){
 		var req = {
 				method : 'POST',
-				url : 'https://api.mercadolibre.com/sites/MLA/search?q=:query',
+				url : 'http://api.mercadolibre.com/sites/MLA/search?q=:query' + '&limit=4',
 				headers : {
 					'Content-Type' : 'application/x-www-form-urlencoded; charset=ISO-8859-1'
 				},
@@ -30,7 +30,7 @@ app.service('Servidor', [ '$http', "$location", '$routeParams', '$rootScope', 'C
     this.getProductoPorId = function(producto, onSuccess, onError){
         var req = {
             method : 'POST',
-            url : 'https://api.mercadolibre.com/items/:' + producto.id,
+            url : 'http://localhost:8089/buscarPorId/' + producto.id,
             headers : {
                 'Content-Type' : 'application/x-www-form-urlencoded; charset=ISO-8859-1'
             },
