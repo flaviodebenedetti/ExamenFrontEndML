@@ -63,7 +63,7 @@ app.get('/inicio.html?descripcion=:descripcion', function (req, res) {
 
 app.get('*', function(req, res){
 	res.sendfile('./public/inicio.html');
-})
+});
 
 // Start server
 app.listen(3001, function(){

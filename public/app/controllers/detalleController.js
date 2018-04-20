@@ -3,6 +3,7 @@ app.controller('DetalleController', ['$http', '$scope', '$location', 'Servidor',
     $scope.init = function(){
 
     }
+    
     $scope.init();
 
 }]);

@@ -22,7 +22,7 @@ app.config(['$routeProvider', '$httpProvider', '$locationProvider', function($ro
   $locationProvider.html5Mode(true);
   //$httpProvider.interceptors.push('httpResponseErrorInterceptor');
 }]);
-
+/* 
 app.run(['$rootScope', '$location', '$routeParams', '$window', 'Servidor', function($rootScope, $location, $routeParams, $window, Servidor) {
 
 	$rootScope.$on('$routeChangeStart', function(e, next, cur){
@@ -33,4 +33,4 @@ app.run(['$rootScope', '$location', '$routeParams', '$window', 'Servidor', funct
     console.log('locationChangeSuccess...');
   });
 
-}]);
+}]); */
