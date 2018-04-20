@@ -1,10 +1,9 @@
-app.controller('busquedaController', ['$http', '$scope', '$location', 'Servidor', '$rootScope', function ($http, $scope, $location, Servidor, $rootScope) {
-    debugger
+app.controller('BusquedaController', ['$http', '$scope', '$location', 'Servidor', '$rootScope', function ($http, $scope, $location, Servidor, $rootScope) {
+    
     $scope.descripcion = "";
 
     $scope.buscar = function(){
-        debugger;
-        $scope.descripcion;
+
     }
 
 }]);

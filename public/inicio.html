@@ -13,13 +13,14 @@
             <div class="div-busqueda">
                 <form class="form-search">
                     <div class="nav-logo"></div>
-                    <input type="text" class="input-search" id="descripcion" name="descripcion" max-length="50" placeholder="Buscar productos" ng-model="descripcion">
+                    <input type="text" class="input-search" id="items?=search" name="items?=search" max-length="50" placeholder="Buscar productos" ng-model="descripcion">
                     <button type="submit" class="btn-search">
                         <i class="material-icons">Buscar</i>
                     </button>
                 </form>
             </div>
         </div>
+        <div id="main" autoscroll="true" ng-view></div>
         <!--Angular.js Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
@@ -28,6 +29,7 @@
         
         <!-- Configuracion de la aplicación angular -->
         <script src="app/app.js"></script>
+        <script src="app/services/servidor.js"></script>
         <script src="app/controllers/busquedaController.js"></script>
         <script src="app/controllers/detalleController.js"></script>
     </body>
