@@ -61,11 +61,11 @@ app.get('/inicio.html?descripcion=:descripcion', function (req, res) {
 	})
 });
 
-app.get('*', function(req, res){
+/* app.get('*', function(req, res){
 	res.sendfile('./public/inicio.html');
-});
+}); */
 
 // Start server
-app.listen(3001, function(){
-    console.log("Listening on port 3001");
+app.listen(3000, function(){
+    console.log("Listening on port 3000");
 });
