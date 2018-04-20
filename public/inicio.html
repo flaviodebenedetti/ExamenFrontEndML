@@ -1,15 +1,16 @@
-<html>
+<html ng-app="testML">
     <head>
+        <base href="/">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="/style/style.scss">
         <title>Flavio MP</title>
     </head>
-    <body ng-app="testML">
+    <body>
         <div class="nav-header">
             <div class="div-busqueda">
                 <form class="form-search">
                     <div class="nav-logo"></div>
-                    <input type="text" class="input-search" id="descripcion" name="descripcion" max-length="80" placeholder="Buscar productos">
+                    <input type="text" class="input-search" id="descripcion" name="descripcion" max-length="50" placeholder="Buscar productos" ng-model="descripcion">
                     <button type="submit" class="btn-search">
                         <div class="icon-search"></div>
                     </button>

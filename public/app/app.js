@@ -19,10 +19,24 @@ app.config(['$routeProvider', '$httpProvider', '$locationProvider', function($ro
 	});
 
   $locationProvider.hashPrefix('');
-  $httpProvider.interceptors.push('httpResponseErrorInterceptor');
+  $locationProvider.html5Mode(true);
+  //$httpProvider.interceptors.push('httpResponseErrorInterceptor');
 }]);
 
-app.factory('httpResponseErrorInterceptor', ['$injector', '$q', '$timeout', function($injector, $q, $timeout) {
+ // create the controller and inject Angular's $scope
+app.controller('BusquedaController', function($scope) {
+    console.log("Cargo bien");
+    $scope.buscar = function(){
+      debugger;
+      $scope.descripcion;
+    }
+});
+
+app.controller('DetalleController', function($scope) {
+  $scope.message = 'Hi! This is the about page.';
+});
+
+/* app.factory('httpResponseErrorInterceptor', ['$injector', '$q', '$timeout', function($injector, $q, $timeout) {
 	return {
 		'request': function(req){
 			blurBackground();
@@ -50,4 +64,4 @@ app.factory('httpResponseErrorInterceptor', ['$injector', '$q', '$timeout', func
 			return $q.reject(response);
 		}
 	};
-}]);
+}]); */
