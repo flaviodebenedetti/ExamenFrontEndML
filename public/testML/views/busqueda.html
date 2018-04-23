@@ -1,0 +1,22 @@
+<div class="results">
+        <div ng-repeat="product in products" ng-click="detalle(product.id)">
+            <div class="image-product">
+                imagen
+            </div>
+            <div class="detalle">
+                <div class="price">
+                    <p>
+                        <span class="">$ </span>
+                        <span ng-bind-html="product.price"></span>
+                    </p>
+                    <div class="image-freeshiping" ng-if="product.shipping.free_shipping"></div>
+                </div>
+                <div class="description">
+                    <p ng-bind-html="product.title"></p>
+                </div>
+            </div>
+            <div class="location">
+                <p ng-bind-html="product.address.state_name"></p>
+            </div>
+        </div>
+</div>
