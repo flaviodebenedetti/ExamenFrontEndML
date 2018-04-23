@@ -53,6 +53,7 @@ function getItemsPorDescripcion(descripcion, callback){
 	//Paso 3 - hacemos el llamado a la api
 	request(options, function (error, response, body) {
 		if (!error && response.statusCode == 200) {
+			console.log("--- Retornamos el resultado ---");
 			callback(body);
 		}
 	});
