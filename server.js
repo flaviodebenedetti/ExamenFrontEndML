@@ -6,9 +6,20 @@ var app = express();
 var http = require('http');
 var request = require('request');
 var cors = require('cors');
+/* var path = require('path');
+var sassMiddleware = require('node-sass-middleware'); */
 
 app.use(cors());
 app.use(express.static('public/testML'));
+
+/* app.use(
+	sassMiddleware({
+		src: path.join('public/testML/sass'), 
+		dest: path.join('/public/testML/style'),
+		indentedSyntax: true,
+		sourceMap: true         
+	})
+ );  */
 
 function getItem(id, callback){
 	//Paso 1 - seteamos el headers
