@@ -1,0 +1,31 @@
+{
+  "name": "ExamenFrontEndML",
+  "main": "server.js",
+  "author": "Flavio de Benedetti",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flaviodebenedetti/ExamenFrontEndML.git"
+  },
+  "dependencies": {
+    "angular-route": "^1.6.2",
+    "express": "^4.16.3",
+    "gulp-install": "^1.1.0",
+    "http": "0.0.0",
+    "jquery": "^3.3.1",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "cors": "^2.8.4",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "jeet": "^7.2.0",
+    "merge-stream": "^1.0.1",
+    "node-jeet-sass": "^0.1.5",
+    "node-sass": "^4.8.3",
+    "path": "^0.12.7"
+  }
+}

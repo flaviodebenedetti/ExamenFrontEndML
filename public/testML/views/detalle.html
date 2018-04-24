@@ -1,0 +1,26 @@
+<div class="productSelected">
+    <div class="product">
+        <div class="image"></div>
+        <div class="payment">
+            <div class="title">
+                <p ng-bind-html="product.title"></p>
+            </div>
+            <div class="price">
+                <p>
+                    <span ng-bind-html="product.base_price"></span>
+                </p>
+            </div>
+            <div class="btn">
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+        <div class="description">
+            <div class="title">
+                <h4>Descripcion del producto</h4>
+            </div>
+            <div class="details" ng-repeat="atributo in attributes">
+                <p>{{atributo.name}} - {{atributo.value_name}}</p>
+            </div>
+        </div>
+    </div>
+</div>
