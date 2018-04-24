@@ -14,6 +14,6 @@ Ctrl + c
 Para liberar el puerto ejecutar el siguiente script
 killall -9 node
 
-Pendiente
+# Pendiente
 Hacer la carga dinámica de las imágenes de cada producto
 También crear una tarea en gulp para compilar los archivos scss a css automáticamente al ejecutar el script antes mencionado. Actualmente en el directorio "/git/ExamenFrontEndML/public/testML/scss" ejecuto "$ node-sass -w style.scss ../style.css"
