@@ -1,3 +1,17 @@
+@import "libs/jeet/index";
+
+.loader{
+    position: relative;
+    left: 490px;
+    top: 65px;
+    .loaderContainer{
+        text-align: center;
+        .loaderImg{
+            height: 240px;
+        }
+    }
+}
+
 .nav-header{
     display: block;
     padding: 0px 0px 0px 220px;
@@ -8,82 +22,90 @@
         span.nav-logo{
             height: 50px;
         }
+        input{
+            position: relative;
+            left: 160px;
+            top: -18px;
+            height: 30px;
+            width: 50%;
+            padding: 5px 40px 5px 5px;
+            border: 1px;
+        }
         .form-search{
             padding: 15px 15px 15px 15px;
+            div.nav-logo{
+                background: url('./images/logo_ml.png') 100% 100%;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                height: 35px;
+                width: 140px;
+                position: relative;
+                top: 20px;
+            }
             .input-search{
                 padding: 7px 60px 9px 15px;
                 border-radius: 2px;
                 background-color: #e6e6e6;
                 border: 0 rgba(0,0,0,.2);
             }
+            .btn-search{
+                border: 1px;
+                position: relative;
+                top: -10px;
+                left: 113px;
+                width: 42px;
+                height: 27px;
+                background-color: transparent;
+                background-image: none;
+            }
+            .material-icons{
+                position: relative;
+                left: -5px;
+                color: #666;
+                line-height: 1em;
+                height: 25px;
+                width: 36px;
+            }
         }
     }
 }
 
-div.nav-logo{
-    background: url('/testML/imges/logo_ml.png') 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 35px;
-    width: 140px;
-    position: relative;
-    top: 20px;
-}
-
-input[type='text']{
-    position: relative;
-    left: 160px;
-    top: -18px;
-    height: 30px;
-    width: 50%;
-    padding: 5px 40px 5px 5px;
-    border: 1px;
-}
-
-.btn-search{
-    border: 1px;
-    position: relative;
-    top: -10px;
-    left: 118px;
-    width: 24px;
-    background-color: transparent;
-    background-image: none;
-}
-
-.material-icons{
-    position: relative;
-    left: -5px;
-    color: #666;
-    line-height: 1em;
-    height: 6px;
-    width: 36px;
-}
-
-div.results{
+.results{
     @include column(12/12);
     padding : 0px 100px 0px 260px;
-    display: inline-block;
-        div.image-product{
-            @include column(3/12);
-            display: inline-block;
-            width: 20%;
+    .result{
+        @include column(8/12);
+        height: 110px;
+        padding: 15px 0px 15px 0px;
+        .image-product{
+            @include column(1.5/8);
+            background: url('./images/sin_imagen.png') 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 100px;
+            position: relative;
         }
-        div.detalle{
-            @include column(6/12);
+        .detalle{
+            @include column(4/8);
             display: inline-block;
             position: relative;
-            p{
-                color: red;
-            }
             .price{
+                display: inline-block;
+                height: 40px;
+                p{
+                    margin: 0px;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
                 .image-freeshiping{
-                    background: url('/testML/imges/shipping.png') 100% 100%;
+                    background: url('./images/shipping.png') 100% 100%;
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
-                    height: 35px;
-                    width: 140px;
+                    height: 25px;
+                    width: 24px;
                     position: relative;
-                    top: 20px;
+                    top: -26px;
+                    left: 90px;
                 }
             }
             .description{
@@ -91,55 +113,68 @@ div.results{
             }
         }
         div.location{
-            @include column(3/12);
+            @include column(2/8);
             display: inline-block;
         }
-}
-
-div.results{
-    div.image-product{
-        @include column(3/12);
-        display: inline-block;
     }
 }
 
 .productSelected{
+    @include column(8/12);
     padding : 0px 100px 0px 260px;
     display: inline-block;
     .product{
-        @include column(12/12);
         .image{
-            @include column(9/12);
+            @include column(5/8);
+            background: url('./images/sin_imagen.png') 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 350px;
+            position: relative;
         }
         .payment{
-            @include column(3/12);
-            .quantity{
-                
-            }
+            @include column(4/12);
             .title{
-
+                padding: 10px 10px 10px 0px;
+                p{
+                    font-size: 24px;
+                    margin: 0px;
+                }
             }
             .price{
-
+                padding: 10px 10px 10px 0px;
+                p{
+                    font-size: 36px;
+                    font-weight: bold;
+                    margin: 0px;
+                }
             }
-            .btn{
-
+            .btn{  
+                padding: 28px 0px 0px 0px;
+                .btn-comprar{
+                    border-radius: 6px;
+                    border: 1px;
+                    background-color: #237aba;
+                    color: #ffffff;
+                    text-align: center;
+                    height: 40px;
+                    font-size: 18px;
+                    width: 100%;
+                }
             }
         }
-    }
-    .description{
-        @include column(12/12);
-        .title{
+        .description{
             @include column(12/12);
-            p{
-                text-align: left;
-                font-weight: bold;    
+            .title{
+                h4{
+                    text-align: left;   
+                }
             }
-        }
-        .detail{
-            @include column(12/12);
-            p{
-                text-align: left;
+            .detail{
+                p{
+                    text-align: left;
+                    margin: 0px;
+                }
             }
         }
     }

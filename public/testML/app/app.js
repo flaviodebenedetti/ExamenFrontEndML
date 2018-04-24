@@ -6,12 +6,27 @@ var app = angular.module('testML', [
 
 app.config(['$routeProvider', '$httpProvider', '$locationProvider', function($routeProvider, $httpProvider, $locationProvider) {
 	$routeProvider.when('/busqueda',{
-        templateUrl: '/testML/views/busqueda.html',
-        controller: 'BusquedaController'
+      templateUrl: '/public/testML/views/busqueda.html',
+      controller: 'BusquedaController'
     }).when('/detalle',{
-    templateUrl: '/testML/views/detalle.html',
-    controller: 'DetalleController'
-	}).otherwise({
-		redirectTo: '/'
+      templateUrl: '/public/testML/views/detalle.html',
+      controller: 'DetalleController'
+	  }).otherwise({
+		  redirectTo: '/'
     });
+    
+    // Por cada promise se muestra o no un gif de carga
+    $httpProvider.interceptors.push(function($q, $rootScope) {
+			return {
+				'request': function(req){
+					showSpinner();
+					return req;
+				},
+				'response': function(res){
+					hideSpinner();
+					return res;
+        }
+      };
+    });
+
 }]);

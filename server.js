@@ -12,26 +12,22 @@ var sassMiddleware = require('node-sass-middleware'); */
 app.use(cors());
 app.use(express.static('public/testML'));
 
-/* app.use(
-	sassMiddleware({
-		src: path.join('public/testML/sass'), 
-		dest: path.join('/public/testML/style'),
-		indentedSyntax: true,
-		sourceMap: true         
-	})
- );  */
-
 function getItem(id, callback){
+	console.log("--- seteamos el headers ---");
 	//Paso 1 - seteamos el headers
 	var headers = {
 		'Content-Type': 'application/x-www-form-urlencoded; charset=ISO-8859-1'
 	}
+
+	console.log("--- configuramos el request ---");
 	//Paso 2 - configuramos el request
 	var options = {
 		url     :  'https://api.mercadolibre.com/items/' + id,
 		method  : 'GET',
 		headers : headers
 	}
+	
+	console.log("--- hacemos el llamado a la api ---");
 	//Paso 3 - hacemos el llamado a la api
 	request(options, function (error, response, body) {
 		if (!error && response.statusCode == 200) {
@@ -43,6 +39,7 @@ function getItem(id, callback){
 app.post('/getItem/:id', function (req, res) {
 	console.log("Post -- /getItem/:id " + req.params.id);
 	getItem(req.params.id, function(response){
+		console.log("--- Retornamos el resultado ---");
 		res.send(response);
 	})
 });
@@ -53,6 +50,7 @@ function getItemsPorDescripcion(descripcion, callback){
 	var headers = {
 		'Content-Type': 'application/x-www-form-urlencoded; charset=ISO-8859-1'
 	}
+	
 	console.log("--- configuramos el request ---");
 	//Paso 2 - configuramos el request
 	var options = {
@@ -60,6 +58,7 @@ function getItemsPorDescripcion(descripcion, callback){
 		method  : 'GET',
 		headers : headers
 	}
+	
 	console.log("--- hacemos el llamado a la api ---");
 	//Paso 3 - hacemos el llamado a la api
 	request(options, function (error, response, body) {
@@ -85,5 +84,3 @@ app.get('/', function(req, res){
 app.listen(8080, function(){
     console.log("Listening on port 8080");
 });
-//node server.js & http-server -c-1 -p 8089 --P http://localhost:8080
-//killall -9 node

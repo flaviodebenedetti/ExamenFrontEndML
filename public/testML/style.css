@@ -1,0 +1,238 @@
+.loader {
+  position: relative;
+  left: 490px;
+  top: 65px; }
+  .loader .loaderContainer {
+    text-align: center; }
+    .loader .loaderContainer .loaderImg {
+      height: 240px; }
+
+.nav-header {
+  display: block;
+  padding: 0px 0px 0px 220px;
+  background-color: #fff159;
+  border: 0;
+  position: relative; }
+  .nav-header .div-busqueda span.nav-logo {
+    height: 50px; }
+  .nav-header .div-busqueda input {
+    position: relative;
+    left: 160px;
+    top: -18px;
+    height: 30px;
+    width: 50%;
+    padding: 5px 40px 5px 5px;
+    border: 1px; }
+  .nav-header .div-busqueda .form-search {
+    padding: 15px 15px 15px 15px; }
+    .nav-header .div-busqueda .form-search div.nav-logo {
+      background: url("./images/logo_ml.png") 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 35px;
+      width: 140px;
+      position: relative;
+      top: 20px; }
+    .nav-header .div-busqueda .form-search .input-search {
+      padding: 7px 60px 9px 15px;
+      border-radius: 2px;
+      background-color: #e6e6e6;
+      border: 0 rgba(0, 0, 0, 0.2); }
+    .nav-header .div-busqueda .form-search .btn-search {
+      border: 1px;
+      position: relative;
+      top: -10px;
+      left: 113px;
+      width: 42px;
+      height: 27px;
+      background-color: transparent;
+      background-image: none; }
+    .nav-header .div-busqueda .form-search .material-icons {
+      position: relative;
+      left: -5px;
+      color: #666;
+      line-height: 1em;
+      height: 25px;
+      width: 36px; }
+
+.results {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+  padding: 0px 100px 0px 260px; }
+  .results::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .results:last-child {
+    margin-right: 0%; }
+  .results .result {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 65.66667%;
+    margin-left: 0%;
+    margin-right: 3%;
+    height: 110px;
+    padding: 15px 0px 15px 0px; }
+    .results .result::after {
+      content: '';
+      display: table;
+      clear: both; }
+    .results .result:last-child {
+      margin-right: 0%; }
+    .results .result .image-product {
+      float: left;
+      clear: none;
+      text-align: inherit;
+      width: 16.3125%;
+      margin-left: 0%;
+      margin-right: 3%;
+      background: url("./images/sin_imagen.png") 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 100px;
+      position: relative; }
+      .results .result .image-product::after {
+        content: '';
+        display: table;
+        clear: both; }
+      .results .result .image-product:last-child {
+        margin-right: 0%; }
+    .results .result .detalle {
+      float: left;
+      clear: none;
+      text-align: inherit;
+      width: 48.5%;
+      margin-left: 0%;
+      margin-right: 3%;
+      display: inline-block;
+      position: relative; }
+      .results .result .detalle::after {
+        content: '';
+        display: table;
+        clear: both; }
+      .results .result .detalle:last-child {
+        margin-right: 0%; }
+      .results .result .detalle .price {
+        display: inline-block;
+        height: 40px; }
+        .results .result .detalle .price p {
+          margin: 0px;
+          font-size: 22px;
+          font-weight: bold; }
+        .results .result .detalle .price .image-freeshiping {
+          background: url("./images/shipping.png") 100% 100%;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          height: 25px;
+          width: 24px;
+          position: relative;
+          top: -26px;
+          left: 90px; }
+      .results .result .detalle .description {
+        position: relative; }
+    .results .result div.location {
+      float: left;
+      clear: none;
+      text-align: inherit;
+      width: 22.75%;
+      margin-left: 0%;
+      margin-right: 3%;
+      display: inline-block; }
+      .results .result div.location::after {
+        content: '';
+        display: table;
+        clear: both; }
+      .results .result div.location:last-child {
+        margin-right: 0%; }
+
+.productSelected {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.66667%;
+  margin-left: 0%;
+  margin-right: 3%;
+  padding: 0px 100px 0px 260px;
+  display: inline-block; }
+  .productSelected::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .productSelected:last-child {
+    margin-right: 0%; }
+  .productSelected .product .image {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 61.375%;
+    margin-left: 0%;
+    margin-right: 3%;
+    background: url("./images/sin_imagen.png") 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 350px;
+    position: relative; }
+    .productSelected .product .image::after {
+      content: '';
+      display: table;
+      clear: both; }
+    .productSelected .product .image:last-child {
+      margin-right: 0%; }
+  .productSelected .product .payment {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 31.33333%;
+    margin-left: 0%;
+    margin-right: 3%; }
+    .productSelected .product .payment::after {
+      content: '';
+      display: table;
+      clear: both; }
+    .productSelected .product .payment:last-child {
+      margin-right: 0%; }
+    .productSelected .product .payment .title {
+      padding: 10px 10px 10px 0px; }
+      .productSelected .product .payment .title p {
+        font-size: 24px;
+        margin: 0px; }
+    .productSelected .product .payment .price {
+      padding: 10px 10px 10px 0px; }
+      .productSelected .product .payment .price p {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0px; }
+    .productSelected .product .payment .btn {
+      padding: 28px 0px 0px 0px; }
+      .productSelected .product .payment .btn .btn-comprar {
+        border-radius: 6px;
+        border: 1px;
+        background-color: #237aba;
+        color: #ffffff;
+        text-align: center;
+        height: 40px;
+        font-size: 18px;
+        width: 100%; }
+  .productSelected .product .description {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%; }
+    .productSelected .product .description::after {
+      content: '';
+      display: table;
+      clear: both; }
+    .productSelected .product .description:last-child {
+      margin-right: 0%; }
+    .productSelected .product .description .title h4 {
+      text-align: left; }
+    .productSelected .product .description .detail p {
+      text-align: left;
+      margin: 0px; }

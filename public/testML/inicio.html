@@ -5,7 +5,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="testML/sass/style.scss">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="public/testML/style.css">
         <title>Flavio MP</title>
     </head>
     <body>
@@ -22,6 +23,15 @@
             </div>
         </div>
         
+        <div class="loader" style="display: none;">
+            <div class="loaderContainer">
+                <div>
+                    <img class="loaderImg" src="public/testML/images/loader.gif">
+                    <p class="loaderText"></p>
+                </div>
+            </div>
+        </div>
+
         <div ng-view></div>
         
         <!--Angular.js Libraries -->
@@ -31,10 +41,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-sanitize.min.js"></script>
         
         <!-- Configuracion de la aplicación angular -->
-        <script src="testML/app/app.js"></script>
-        <script src="testML/app/services/servidor.js"></script>
-        <script src="testML/app/controllers/mainController.js"></script>
-        <script src="testML/app/controllers/busquedaController.js"></script>
-        <script src="testML/app/controllers/detalleController.js"></script>
+        <script src="./public/testML/app/app.js"></script>
+        <script src="./public/testML/app/utils.js"></script>
+        <script src="./public/testML/app/services/servidor.js"></script>
+        <script src="./public/testML/app/controllers/mainController.js"></script>
+        <script src="./public/testML/app/controllers/busquedaController.js"></script>
+        <script src="./public/testML/app/controllers/detalleController.js"></script>
     </body>
 </html>

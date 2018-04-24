@@ -2,26 +2,25 @@
     <div class="product">
         <div class="image"></div>
         <div class="payment">
-            <div class="quantity">
-                <p>vendido</p>
-            </div>
             <div class="title">
-                <p></p>
+                <p ng-bind-html="product.title"></p>
             </div>
             <div class="price">
-                <p>$20</p>
+                <p>
+                    <span ng-bind-html="product.base_price"></span>
+                </p>
             </div>
             <div class="btn">
-                Comprar
+                <button class="btn-comprar">Comprar</button>
             </div>
         </div>
-    </div>
-    <div class="description">
-        <div class="title">
-            <p>Descripcion</p>
-        </div>
-        <div class="details">
-            <p>Aca va la descripcion del producto que seguramente sea muuuuuy larga</p>
+        <div class="description">
+            <div class="title">
+                <h4>Descripcion del producto</h4>
+            </div>
+            <div class="details" ng-repeat="atributo in attributes">
+                <p>{{atributo.name}} - {{atributo.value_name}}</p>
+            </div>
         </div>
     </div>
 </div>

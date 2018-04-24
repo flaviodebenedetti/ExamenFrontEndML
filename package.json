@@ -22,6 +22,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
+    "jeet": "^7.2.0",
+    "merge-stream": "^1.0.1",
+    "node-jeet-sass": "^0.1.5",
+    "node-sass": "^4.8.3",
     "path": "^0.12.7"
   }
 }
